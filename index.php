@@ -21,5 +21,21 @@ var_dump($crocchette); */
 $ginevra = new Utente('Ginevra', 'Giolitto', '21/09/1995', 'F', 'Italia, Rimini, Via N. Nagli 21 (RN)', 'ginevra@gmail.com');
 /* var_dump($ginevra); */
 
-var_dump($ginevra->haUnAccount($utenti_registrati));
+/* var_dump($ginevra->haUnAccount($utenti_registrati)); */
+?>
 
+    <?php
+    include __DIR__ . "/components/head.php"
+    ?>
+
+    <?php
+    include __DIR__ . "/components/header.php"
+    ?>
+
+    <?php
+    include __DIR__ . "/components/main.php"
+    ?>
+
+    <?php
+    include __DIR__ . "/components/footer.php"
+    ?>
