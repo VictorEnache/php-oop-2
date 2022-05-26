@@ -6,11 +6,11 @@ class Utente {
     protected $anno_di_nascita;
     protected $sesso;
     protected $indirizzo;
-    protected $account_creato;
     protected $email;
     
+    
 
-    function __construct(String $nome,String $cognome,String $anno_di_nascita,String $sesso,String $indirizzo,bool $account_creato = false, String $email){
+    function __construct(String $nome,String $cognome,String $anno_di_nascita,String $sesso,String $indirizzo, String $email){
         $this->nome = $nome;
         $this->cognome = $cognome;
         $this->anno_di_nascita = $anno_di_nascita;
@@ -22,5 +22,13 @@ class Utente {
         
     }
 
+    public function haUnAccount($array){
+        foreach($array as $key => $user){
+            if(in_array($this->email,$user)){
+            return true;
+            } 
+        }
+
+    }
 
 }
