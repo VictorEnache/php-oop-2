@@ -6,7 +6,7 @@ class Prodotto{
     /* il prezzo verra espresso in centesimi per evitare errori nelle operazioni con i float */
     protected $price;
 
-    function __construct(String $name,String $image,String $price){
+    function __construct(String $name,String $image,int $price){
         $this->name = $name;
         $this->image = $image;
         $this->price = $price;
