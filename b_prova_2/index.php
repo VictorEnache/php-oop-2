@@ -36,5 +36,10 @@
 
     $palla = new Gioco('palla', 'una bella palla', 'è rotonda', 120, 4, 'url', 'gomma', 'rimbalza');
 
-    var_dump($palla->returnDiscount('fg'))
+    try{
+         var_dump($palla->returnDiscount(501));
+    } catch (Exception $e) {
+        var_dump("Eccezzione: " . $e->getMessage());
+    }
+   
 ?>
