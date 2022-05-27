@@ -22,7 +22,9 @@
 
     trait Discount{
         function returnDiscount($sconto){
-            if(!is_int($sconto) || $sconto > 100 || $sconto<0){
+            if(!is_int($sconto) ){
+                throw new Exception ('devi inserire un "numero" non una stringa');
+            } elseif ($sconto > 100 || $sconto<0) {
                 throw new Exception ('devi inserire un "numero" compreso tra 0 e 100');
             }
             return $this->prezzo * $sconto/100;
@@ -37,7 +39,7 @@
     $palla = new Gioco('palla', 'una bella palla', 'è rotonda', 120, 4, 'url', 'gomma', 'rimbalza');
 
     try{
-         var_dump($palla->returnDiscount(501));
+         var_dump($palla->returnDiscount('wsdrfg'));
     } catch (Exception $e) {
         var_dump("Eccezzione: " . $e->getMessage());
     }
